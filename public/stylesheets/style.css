@@ -469,6 +469,11 @@ section {
   font-size: 1.2em;
 }
 
+/*.video-container iframe {
+  width: 100%;
+  height: 100%;
+}*/
+
 //Vegan Tour Review Section
 #tour-review {
   width:100%;
@@ -523,6 +528,12 @@ section {
 #col-review > a:focus {
   background-color: #46d246;
 }
+
+.video-container iframe {
+width: 100%;
+height: 100%;
+}
+
 
 //Korean Culture Section
 #korean-culture {
