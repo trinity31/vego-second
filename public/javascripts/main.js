@@ -14,4 +14,9 @@ $(function(){
 		}, 1500, 'easeInOutExpo');
 		event.preventDefault();
 	});
+
+	$('.navbar-nav a').on('click', function(){
+    	$('.navbar-toggle').click() //bootstrap 3.x by Richard
+	});
 });
+
