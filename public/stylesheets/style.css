@@ -158,6 +158,7 @@
 .carousel-inner > item {
   padding:0;
 }
+
 .carousel-caption {
   margin:0;
 }
@@ -206,7 +207,6 @@
   top:0;
   left:0;*/
   min-width:100%;
-  height: 600px;
 }
 
 @media (max-width: 767px) {
@@ -252,14 +252,37 @@ section {
   padding: 70px 0 40px;
 }
 
+/*#service {
+  width:100%;
+  padding:0;
+}
+
+.service-section {
+  margin:0;
+ }
+
+.service-section > .container {
+  width:100%;
+  margin:0;
+  background-color: #ffcccc;
+  padding-top:50px;
+  padding-bottom: 50px;
+}
+
+.service-section > .container > p {
+  font-size: 1.5em;
+}*/
+
 //About Section
 #about {
   width:100%;
-  margin-top:100px;
+  /*margin-top:0;*/
+  padding:0;
 }
 
 .about-section {
   margin-top:100px;
+  /*margin:0;*/
  }
 
 .about-section > .container {
@@ -267,7 +290,7 @@ section {
   margin:0;
   background-color: #8AF1CD;
   padding-top:150px;
-  padding-bottom: 150px;
+  padding-bottom: 50px;
 }
 
 .about-section > .container > p {

@@ -5,10 +5,18 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var db = require('./db.js');
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+var PORT = process.env.PORT || 8080; 
+/*
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
+
+server.listen(80);*/
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -56,5 +64,17 @@ app.use(function(err, req, res, next) {
   });
 });
 
+/*io.on('connection', function (socket) {
+  socket.emit('news', { hello: 'world' });
+  socket.on('my other event', function (data) {
+    console.log(data);
+  });
+});*/
+
+ db.sequelize.sync({force:true}).then(function() {
+   app.listen(PORT, function() {
+     console.log('Express listening on port ' + PORT);
+  }); 
+});
 
 module.exports = app;
