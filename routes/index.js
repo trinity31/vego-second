@@ -11,12 +11,8 @@ router.get('/', function(req, res, next) {
 
 router.post('/join', function(req, res, next) {
 	var body = _.pick(req.body, 'fullname', 'email');
-	console.log("post request");
 	db.user.create(body).then(function(user) {
 		console.log("Successfully created user.");
-/*		res.render('index', function(err, html) {
-			res.send('<script>alert(\'Successfully joined!\')</script>');
-		});*/
 		res.render('index', {status: 'success'});
 	}, function(e) {
 		res.status(400);
